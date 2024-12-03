@@ -8,15 +8,86 @@ from datetime import datetime
 from pathlib import Path
 
 import streamlit as st
-
 from rag_bot import create_educational_bot
 
+# Configure page and logging
 st.set_page_config(
     page_title="Educational RAG Assistant", page_icon="📚", layout="wide"
 )
-# Configure logging
+
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
+
+# Ensure education_data directory exists
+EDUCATION_DATA_PATH = "educational_data"
+KNOWLEDGE_BASE_PATH = "knowledge_base.pkl"
+
+if not os.path.exists(EDUCATION_DATA_PATH):
+    os.makedirs(EDUCATION_DATA_PATH)
+    logger.info(f"Created {EDUCATION_DATA_PATH} directory")
+
+
+def init_knowledge_base():
+    """Initialize the knowledge base with comprehensive sample content if needed."""
+    sample_file = os.path.join(EDUCATION_DATA_PATH, "sample.txt")
+    if not any(Path(EDUCATION_DATA_PATH).glob("*.txt")):
+        logger.info("Creating sample educational content...")
+        sample_content = """# Mathematics - Grade 4-5
+## Number Operations
+- Addition and subtraction with multi-digit numbers
+- Multiplication and division with 2-digit numbers
+- Fractions and decimals basics
+- Understanding place value to millions
+- Problem-solving with word problems
+
+## Geometry
+- Understanding angles (acute, right, obtuse)
+- Properties of 2D shapes
+- Area and perimeter calculations
+- Basic coordinate geometry
+- Symmetry and patterns
+
+# English Language Arts - Grade 4-5
+
+## Reading Comprehension
+- Main idea and supporting details
+- Making inferences
+- Character analysis
+- Story elements
+- Author's purpose
+
+## Writing Skills
+- Paragraph structure
+- Essay organization
+- Descriptive writing
+- Narrative writing
+- Opinion writing
+
+# Science - Grade 4-5
+
+## Life Science
+- Plant and animal adaptations
+- Food chains and ecosystems
+- Human body systems
+- Life cycles
+- Classification of living things
+
+## Physical Science
+- States of matter
+- Forces and motion
+- Simple machines
+- Energy forms
+- Sound and light"""
+
+        try:
+            with open(sample_file, "w", encoding="utf-8") as f:
+                f.write(sample_content)
+            logger.info("Created sample educational content file")
+            return True
+        except Exception as e:
+            logger.error(f"Error creating sample content: {e}")
+            return False
+    return True
 
 
 @st.cache_resource
@@ -30,6 +101,13 @@ def init_rag_bot():
             st.stop()
 
         with st.spinner("Initializing RAG Bot..."):
+            # Initialize knowledge base first
+            st.text("Setting up educational knowledge base...")
+            if not init_knowledge_base():
+                st.error("Failed to initialize knowledge base")
+                st.stop()
+
+            st.text("Loading model and processing educational content...")
             bot = create_educational_bot(model_path)
             st.success("Bot initialized successfully!")
             return bot
@@ -51,10 +129,12 @@ if "rag_bot" not in st.session_state:
 
 
 def generate_code():
+    """Generate a random assignment code."""
     return "".join(random.choices(string.ascii_uppercase + string.digits, k=6))
 
 
 def save_data():
+    """Save assignments and codes to JSON file."""
     try:
         data = {
             "assignments": st.session_state.assignments,
@@ -67,6 +147,7 @@ def save_data():
 
 
 def load_data():
+    """Load assignments and codes from JSON file."""
     try:
         if os.path.exists("data.json"):
             with open("data.json", "r") as f:
@@ -80,11 +161,13 @@ def load_data():
 
 
 def teacher_interface():
+    """Handle the teacher interface."""
     st.title("Teacher Interface")
 
     with st.form("assignment_form"):
         st.subheader("Create New Assignment")
         title = st.text_input("Assignment Title")
+        description_1 = st.text_input("Description")
         subject = st.selectbox(
             "Subject",
             ["Mathematics", "Physics", "Chemistry", "Biology", "Computer Science"],
@@ -96,7 +179,7 @@ def teacher_interface():
         try:
             with st.spinner("Generating assignment..."):
                 description = st.session_state.rag_bot.generate_assignment(
-                    title, subject, level
+                    title, subject, level, description_1
                 )
 
             code = generate_code()
@@ -138,6 +221,7 @@ def teacher_interface():
 
 
 def student_interface():
+    """Handle the student interface."""
     st.title("Student Interface")
 
     code = st.text_input("Enter assignment code").upper()
@@ -200,6 +284,7 @@ def student_interface():
 
 
 def main():
+    """Main application entry point."""
     load_data()
 
     st.sidebar.title("Educational RAG Assistant")
@@ -212,5 +297,4 @@ def main():
 
 
 if __name__ == "__main__":
-
     main()
