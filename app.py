@@ -96,7 +96,7 @@ def init_knowledge_base():
 def init_rag_bot():
     """Initialize the RAG bot with progress reporting."""
     try:
-        model_path = "Llama-3.2-3B-Instruct-Q5_K_S.gguf"
+        model_path = "qwen2-7b-instruct-q3_k_m.gguf"
 
         if not os.path.exists(model_path):
             st.error(f"Model file not found: {model_path}")
@@ -285,42 +285,42 @@ def student_interface():
             st.session_state.pop("current_assignment", None)
 
 
-def install_requirements():
-    """Install required packages from requirements.txt"""
-    try:
-        # Check if requirements.txt exists
-        if not os.path.exists("requirements.txt"):
-            with open("requirements.txt", "w") as f:
-                f.write(
-                    """streamlit
-llama-cpp-python
-sentence-transformers
-scikit-learn
-torch
-tqdm"""
-                )
-            print("Created requirements.txt file")
+# def install_requirements():
+#     """Install required packages from requirements.txt"""
+#     try:
+#         # Check if requirements.txt exists
+#         if not os.path.exists("requirements.txt"):
+#             with open("requirements.txt", "w") as f:
+#                 f.write(
+#                     """streamlit
+# llama-cpp-python
+# sentence-transformers
+# scikit-learn
+# torch
+# tqdm"""
+#                 )
+#             print("Created requirements.txt file")
 
-        print("Installing requirements...")
-        subprocess.check_call(
-            [sys.executable, "-m", "pip", "install", "-r", "requirements.txt"]
-        )
-        print("Requirements installed successfully!")
-        return True
-    except subprocess.CalledProcessError as e:
-        print(f"Error installing requirements: {e}")
-        return False
-    except Exception as e:
-        print(f"Unexpected error during installation: {e}")
-        return False
+#         print("Installing requirements...")
+#         subprocess.check_call(
+#             [sys.executable, "-m", "pip", "install", "-r", "requirements.txt"]
+#         )
+#         print("Requirements installed successfully!")
+#         return True
+#     except subprocess.CalledProcessError as e:
+#         print(f"Error installing requirements: {e}")
+#         return False
+#     except Exception as e:
+#         print(f"Unexpected error during installation: {e}")
+#         return False
 
 
 def main():
     """Main application entry point."""
     load_data()
-    if not install_requirements():
-        print("Failed to install requirements. Exiting.")
-        sys.exit(1)
+    # if not install_requirements():
+    #     print("Failed to install requirements. Exiting.")
+    #     sys.exit(1)
     st.sidebar.title("Educational RAG Assistant")
     mode = st.sidebar.selectbox("Select Mode", ["Teacher", "Student"])
 

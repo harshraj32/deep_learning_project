@@ -1,0 +1,209 @@
+{
+  "average_metrics": {
+    "exact_match": 0.0,
+    "bleu_score": 0.0,
+    "f1_score": 0.6254969703499116
+  },
+  "results": [
+    {
+      "question": "Question: This math problem has got me stumped: Natalia sold clips to 48 of her friends in April, and then she sold half as many clips in May. How many clips did Natalia sell altogether in April and May?\nCan you show me the way?\nAnswer: ",
+      "actual": "Natalia sold 48/2 = 24 clips in May.\nNatalia sold 48+24 = 72 clips altogether in April and May.",
+      "predicted": "Natalia sold 48 clips in April.\nIn May, she sold half as many clips as she did in April. To find out how many clips she sold in May, we need to divide the number of clips she sold in April by 2. So, 48 / 2 = 24 clips were sold in May.\nTo find out the total number of clips sold in April and May, we need to add the number of clips sold in April and May together. So",
+      "metrics": {
+        "exact_match": false,
+        "bleu_score": 0.0,
+        "f1_score": 0.8571428571428571
+      }
+    },
+    {
+      "question": "Question: Weng earns $12 an hour for babysitting. Yesterday, she just did 50 minutes of babysitting. How much did she earn?\nAnswer: ",
+      "actual": "Weng earns 12/60 = $0.2 per minute.\nWorking 50 minutes, she earned 0.2 x 50 = $10.",
+      "predicted": "Weng earns $12 per hour for babysitting. There are 60 minutes in an hour, so to find out how much she earns per minute, we divide her hourly rate by 60. That means she earns $12/60 = $0.20 per minute.\nYesterday, she worked for 50 minutes. To find out how much she earned, we multiply the number of minutes she worked by her rate per minute. That means she earned $0",
+      "metrics": {
+        "exact_match": false,
+        "bleu_score": 0.0,
+        "f1_score": 0.8000000000000002
+      }
+    },
+    {
+      "question": "Question: I'm completely lost with this math problem: Betty is saving money for a new wallet which costs $100. Betty has only half of the money she needs. Her parents decided to give her $15 for that purpose, and her grandparents twice as much as her parents. How much more money does Betty need to buy the wallet?\nCan you give me a hand?\nAnswer: ",
+      "actual": "In the beginning, Betty has only 100 / 2 = $50.\nBetty's grandparents gave her 15 * 2 = $30.\nThis means, Betty needs 100 - 50 - 30 - 15 = $5 more.",
+      "predicted": "Betty needs $100 for the wallet and she currently has half of that, so she has $100/2 = $50.\nHer parents gave her $15, and her grandparents gave her twice as much as her parents, so her grandparents gave her $15 x 2 = $30.\nIn total, Betty now has $50 + $15 + $30 = $95.\nTo find out how much more money she needs, we",
+      "metrics": {
+        "exact_match": false,
+        "bleu_score": 0.0,
+        "f1_score": 0.8333333333333334
+      }
+    },
+    {
+      "question": "Question: Explain how to solve this math problem: Julie is reading a 120-page book. Yesterday, she was able to read 12 pages and today, she read twice as many pages as yesterday. If she wants to read half of the remaining pages tomorrow, how many pages should she read?\nAnswer: ",
+      "actual": "Maila read 12 x 2 = 24 pages today.\nSo she was able to read a total of 12 + 24 = 36 pages since yesterday.\nThere are 120 - 36 = 84 pages left to be read.\nSince she wants to read half of the remaining pages tomorrow, then she should read 84/2 = 42 pages.",
+      "predicted": "Julie read 12 pages yesterday.\nToday, she read twice as many pages as yesterday, so she read 2 * 12 = 24 pages today.\nIn total, she has read 12 + 24 = 36 pages in the past two days.\nThe remaining number of pages in the book is 120 - 36 = 84 pages.\nIf she wants to read half of the remaining pages tomorrow, she should read 84",
+      "metrics": {
+        "exact_match": false,
+        "bleu_score": 0.0,
+        "f1_score": 0.923076923076923
+      }
+    },
+    {
+      "question": "Question: I need a clearer understanding of how to solve: James writes a 3-page letter to 2 different friends twice a week.  How many pages does he write a year?\nAnswer: ",
+      "actual": "He writes each friend 3*2=6 pages a week\nSo he writes 6*2=12 pages every week\nThat means he writes 12*52=624 pages a year",
+      "predicted": "First, let's find out how many pages James writes to each friend each week. Since he writes a 3-page letter to each friend twice a week, he writes 3*2 = 6 pages to each friend each week.",
+      "metrics": {
+        "exact_match": false,
+        "bleu_score": 0.0,
+        "f1_score": 0.6666666666666666
+      }
+    },
+    {
+      "question": "Question: Mark has a garden with flowers. He planted plants of three different colors in it. Ten of them are yellow, and there are 80% more of those in purple. There are only 25% as many green flowers as there are yellow and purple flowers. How many flowers does Mark have in his garden?\nGive me a clear explanation. \nAnswer: ",
+      "actual": "There are 80/100 * 10 = 8 more purple flowers than yellow flowers.\nSo in Mark's garden, there are 10 + 8 = 18 purple flowers.\nPurple and yellow flowers sum up to 10 + 18 = 28 flowers.\nThat means in Mark's garden there are 25/100 * 28 = 7 green flowers.\nSo in total Mark has 28 + 7 = 35 plants in his garden.",
+      "predicted": "If there are 10 yellow flowers, then the number of purple flowers is 10 + 80% of 10.\nTo find 80% of 10, we multiply 10 by 0.80, so 10 * 0.80 = 8.\nTherefore, the number of purple flowers is 10 + 8 = 18.\nThe total number of yellow and purple flowers is 10 + 1",
+      "metrics": {
+        "exact_match": false,
+        "bleu_score": 0.0,
+        "f1_score": 0.5333333333333333
+      }
+    },
+    {
+      "question": "Question: Albert is wondering how much pizza he can eat in one day. He buys 2 large pizzas and 2 small pizzas. A large pizza has 16 slices and a small pizza has 8 slices. If he eats it all, how many pieces does he eat that day?\nGive me a solution to this problem\nAnswer: ",
+      "actual": "He eats 32 from the largest pizzas because 2 x 16 = 32\nHe eats 16 from the small pizza because 2 x 8 = 16\nHe eats 48 pieces because 32 + 16 = 48",
+      "predicted": "First, let's find out how many slices are in the large pizzas. Since each large pizza has 16 slices and Albert buys 2 of them, the total number of slices from the large pizzas is 16 * 2 = 32 slices.",
+      "metrics": {
+        "exact_match": false,
+        "bleu_score": 0.0,
+        "f1_score": 0.7499999999999999
+      }
+    },
+    {
+      "question": "Question: Ken created a care package to send to his brother, who was away at boarding school.  Ken placed a box on a scale, and then he poured into the box enough jelly beans to bring the weight to 2 pounds.  Then, he added enough brownies to cause the weight to triple.  Next, he added another 2 pounds of jelly beans.  And finally, he added enough gummy worms to double the weight once again.  What was the final weight of the box of goodies, in pounds?\nAnswer: ",
+      "actual": "To the initial 2 pounds of jelly beans, he added enough brownies to cause the weight to triple, bringing the weight to 2*3=6 pounds.\nNext, he added another 2 pounds of jelly beans, bringing the weight to 6+2=8 pounds.\nAnd finally, he added enough gummy worms to double the weight once again, to a final weight of 8*2=16 pounds.",
+      "predicted": "First, Ken placed a box on a scale, and then he poured into the box enough jelly beans to bring the weight to 2 pounds.\nThen, he added enough brownies to cause the weight to triple. Tripling the weight of 2 pounds means multiplying 2 by 3, so the weight became 6 pounds.\nNext, he added another 2 pounds of jelly beans. Adding 2 pounds to the current weight of 6 pounds gives a weight of 8 pounds.\nAnd",
+      "metrics": {
+        "exact_match": false,
+        "bleu_score": 0.0,
+        "f1_score": 0.888888888888889
+      }
+    },
+    {
+      "question": "Question: This math problem has got me stumped: Alexis is applying for a new job and bought a new set of business clothes to wear to the interview. She went to a department store with a budget of $200 and spent $30 on a button-up shirt, $46 on suit pants, $38 on a suit coat, $11 on socks, and $18 on a belt. She also purchased a pair of shoes, but lost the receipt for them. She has $16 left from her budget. How much did Alexis pay for the shoes?\nCan you show me the way?\nAnswer: ",
+      "actual": "Let S be the amount Alexis paid for the shoes.\nShe spent S + 30 + 46 + 38 + 11 + 18 = S + 143.\nShe used all but $16 of her budget, so S + 143 = 200 - 16 = 184.\nThus, Alexis paid S = 184 - 143 = $41 for the shoes.",
+      "predicted": "Alexis had a budget of $200 and spent $30 on a shirt, $46 on pants, $38 on a coat, $11 on socks, and $18 on a belt. The total amount she spent on these items is $30 + $46 + $38 + $11 + $18 = $143.\nShe also has $16 left from her budget. So the total amount she spent, including the shoes",
+      "metrics": {
+        "exact_match": false,
+        "bleu_score": 0.0,
+        "f1_score": 0.888888888888889
+      }
+    },
+    {
+      "question": "Question: Solve the following math problem: Tina makes $18.00 an hour.  If she works more than 8 hours per shift, she is eligible for overtime, which is paid by your hourly wage + 1/2 your hourly wage.  If she works 10 hours every day for 5 days, how much money does she make?\nAnswer: ",
+      "actual": "She works 8 hours a day for $18 per hour so she makes 8*18 = $144.00 per 8-hour shift\nShe works 10 hours a day and anything over 8 hours is eligible for overtime, so she gets 10-8 = 2 hours of overtime\nOvertime is calculated as time and a half so and she makes $18/hour so her overtime pay is 18*.5 = $9.00\nHer overtime pay is 18+9 = $27.00\nHer base pay is $144.00 per 8-hour shift and she works 5 days and makes 5 * $144 = $720.00\nHer overtime pay is $27.00 per hour and she works 2 hours of overtime per day and makes 27*2 = $54.00 in overtime pay\n2 hours of overtime pay for 5 days means she makes 54*5 = $270.00\nIn 5 days her base pay is $720.00 and she makes $270.00 in overtime pay so she makes $720 + $270 = $990.00",
+      "predicted": "First, let's find out how much Tina makes per hour for her regular hours. She works 8 hours a day, and she makes $18 per hour, so she makes 8 * $18 = $144 per day for her regular hours.",
+      "metrics": {
+        "exact_match": false,
+        "bleu_score": 0.0,
+        "f1_score": 0.35294117647058826
+      }
+    },
+    {
+      "question": "Question: Solve the following math problem: A deep-sea monster rises from the waters once every hundred years to feast on a ship and sate its hunger. Over three hundred years, it has consumed 847 people. Ships have been built larger over time, so each new ship has twice as many people as the last ship. How many people were on the ship the monster ate in the first hundred years?\nAnswer: ",
+      "actual": "Let S be the number of people on the first hundred years\u2019 ship.\nThe second hundred years\u2019 ship had twice as many as the first, so it had 2S people.\nThe third hundred years\u2019 ship had twice as many as the second, so it had 2 * 2S = 4S people.\nAll the ships had S + 2S + 4S = 7S = 847 people.\nThus, the ship that the monster ate in the first hundred years had S = 847 / 7 = 121 people on it.",
+      "predicted": "Let's denote the number of people on the ship the monster ate in the first hundred years as $x$. Since each new ship has twice as many people as the last ship, the number of people on the second ship is $2x$, and the number of people on the third ship is $2 \\times 2x = 4x$.",
+      "metrics": {
+        "exact_match": false,
+        "bleu_score": 0.0,
+        "f1_score": 0.5714285714285715
+      }
+    },
+    {
+      "question": "Question: Tobias is buying a new pair of shoes that costs $95. He has been saving up his money each month for the past three months. He gets a $5 allowance a month. He also mows lawns and shovels driveways. He charges $15 to mow a lawn and $7 to shovel. After buying the shoes, he has $15 in change. If he mows 4 lawns, how many driveways did he shovel?\nHow to solve this?\nAnswer: ",
+      "actual": "He saved up $110 total because 95 + 15 = 110\nHe saved $15 from his allowance because 3 x 5 = 15\nHe earned $60 mowing lawns because 4 x 15 = 60\nHe earned $35 shoveling driveways because 110 - 60 - 15 = 35\nHe shoveled 5 driveways because 35 / 7 = 5",
+      "predicted": "1. **Calculate total savings from allowance:**",
+      "metrics": {
+        "exact_match": false,
+        "bleu_score": 0.0,
+        "f1_score": 0.0
+      }
+    },
+    {
+      "question": "Question: I'm completely lost with this math problem: Randy has 60 mango trees on his farm. He also has 5 less than half as many coconut trees as mango trees. How many trees does Randy have in all on his farm?\nCan you give me a hand?\nAnswer: ",
+      "actual": "Half of the number of Randy's mango trees is 60/2 = 30 trees.\nSo Randy has 30 - 5 = 25 coconut trees.\nTherefore, Randy has 60 + 25 = 85 treeson his farm.",
+      "predicted": "1. **Find the number of coconut trees:**",
+      "metrics": {
+        "exact_match": false,
+        "bleu_score": 0.0,
+        "f1_score": 0.0
+      }
+    },
+    {
+      "question": "Question: Find the answer to this math problem: Jasper will serve charcuterie at his dinner party. He buys 2 pounds of cheddar cheese for $10, a pound of cream cheese that cost half the price of the cheddar cheese, and a pack of cold cuts that cost twice the price of the cheddar cheese. How much does he spend on the ingredients?\nAnswer: ",
+      "actual": "A pound of cream cheese cost $10 / 2 = $5.\nA pack of cold cuts cost $10 x 2 = $20.\nJasper spent $10 + $5 + $20 = $35 on the ingredients.",
+      "predicted": "2 pounds of cheddar cheese costs $10, so 1 pound costs $10 / 2 = $5.\nThe cream cheese costs half the price of the cheddar cheese, so it costs $5 / 2 = $2.50.\nThe pack of cold cuts costs twice the price of the cheddar cheese, so it costs $10 * 2 = $20.\nTo find out how much he spends on the ingredients, we add up the cost of",
+      "metrics": {
+        "exact_match": false,
+        "bleu_score": 0.0,
+        "f1_score": 0.7272727272727272
+      }
+    },
+    {
+      "question": "Question: Find the answer to this math problem: Joy can read 8 pages of a book in 20 minutes. How many hours will it take her to read 120 pages?\nAnswer: ",
+      "actual": "In one hour, there are 3 sets of 20 minutes.\nSo, Joy can read 8 x 3 = 24 pages in an hour.\nIt will take her 120/24 = 5 hours to read 120 pages.",
+      "predicted": "Joy can read 8 pages in 20 minutes. So, the rate at which she reads is 8 pages per 20 minutes, or $\\frac{8}{20} = 0.4$ pages per minute.",
+      "metrics": {
+        "exact_match": false,
+        "bleu_score": 0.0,
+        "f1_score": 0.4444444444444444
+      }
+    },
+    {
+      "question": "Question: James creates a media empire.  He creates a movie for $2000.  Each DVD cost $6 to make.  He sells it for 2.5 times that much.  He sells 500 movies a day for 5 days a week.  How much profit does he make in 20 weeks?\nGive me a detailed solution. \nAnswer: ",
+      "actual": "He sold each DVD for 6*2.5=$15\nSo he makes a profit of 15-6=$9\nSo each day he makes a profit of 9*500=$4500\nSo he makes 4500*5=$22,500\nHe makes 22,500*20=$450,000\nThen after the cost of creating the movie he has a profit of 450,000-2000=$448,000",
+      "predicted": "First, let's find out how much James sells each DVD for. He sells it for 2.5 times the cost to make it, so the selling price is $6 * 2.5 = $15.",
+      "metrics": {
+        "exact_match": false,
+        "bleu_score": 0.0,
+        "f1_score": 0.35294117647058826
+      }
+    },
+    {
+      "question": "Question: The profit from a business transaction is shared among 2 business partners, Mike and Johnson in the ratio 2:5 respectively. If Johnson got $2500, how much will Mike have after spending some of his share on a shirt that costs $200?\nSolve it. \nAnswer: ",
+      "actual": "According to the ratio, for every 5 parts that Johnson gets, Mike gets 2 parts\nSince Johnson got $2500, each part is therefore $2500/5 = $500\nMike will get 2*$500 = $1000\nAfter buying the shirt he will have $1000-$200 = $800 left",
+      "predicted": "2500*2/5 = $1000 is Mike's share of the profit.\nAfter buying the shirt, Mike will have $1000-$200=$800 left.",
+      "metrics": {
+        "exact_match": false,
+        "bleu_score": 0.0,
+        "f1_score": 0.923076923076923
+      }
+    },
+    {
+      "question": "Question: Can you break down the solution for me for this math problem: In a truck, there are 26 pink hard hats, 15 green hard hats, and 24 yellow hard hats.  If Carl takes away 4 pink hard hats, and John takes away 6 pink hard hats and twice as many green hard hats as the number of pink hard hats that he removed, then calculate the total number of hard hats that remained in the truck.\nAnswer: ",
+      "actual": "If there were 26 pink hard hats and Carl took away 4 pink hard hats, the number of pink hard hats that remained is 26-4 = 22\nJohn also took away 6 pink hard hats, leaving 22-6 = 16 pink hard hats in the truck.\nIf John also took twice as many green hard hats as pink hard hats, he took 2*6 = 12 green hard hats.\nThe total number of green hard hats that remained in the truck is 15-12 = 3\nIn the truck, after some are taken, there were 3 green hard hats + 16 pink hard hats = 19 hard hats in the truck.\nAltogether, 19 green and pink hard hats + 24 yellow hards hats = 43 hard hats remained in the truck",
+      "predicted": "The total number of pink hard hats in the truck is 26. If Carl takes away 4 pink hard hats, then the number of pink hard hats remaining is $26 - 4 = 22$.\nJohn takes away 6 pink hard hats, so the number of pink hard hats remaining is $22 - 6 = 16$.\nJohn also takes twice as many green hard hats as the number of pink hard hats he removed, which means he takes $",
+      "metrics": {
+        "exact_match": false,
+        "bleu_score": 0.0,
+        "f1_score": 0.5
+      }
+    },
+    {
+      "question": "Question: Find the answer to this math problem: It takes Roque two hours to walk to work and one hour to ride his bike to work. Roque walks to and from work three times a week and rides his bike to and from work twice a week. How many hours in total does he take to get to and from work a week with walking and biking?\nAnswer: ",
+      "actual": "Roque takes 2*3 = 6 hours a week to walk to work.\nRoque takes 6*2 = 12 hours a week to walk to and from work.\nRoque takes 1*2 = 2 hours a week to bike to work.\nRoque takes 2*2 = 4 hours a week to bike to and from work.\nIn total, Roque takes 12+4 = 16 hour a week to go to and from work.",
+      "predicted": "Roque walks to work 3 times a week, and since it takes him 2 hours to walk to work, he spends 3 * 2 = 6 hours walking to work each week.\nHe also walks back from work, so that's another 6 hours spent walking each week.\nIn total, Roque spends 6 + 6 = 12 hours walking to and from work each week.",
+      "metrics": {
+        "exact_match": false,
+        "bleu_score": 0.0,
+        "f1_score": 0.7272727272727273
+      }
+    },
+    {
+      "question": "Question: Can you break down the solution for me for this math problem: Tim rides his bike back and forth to work for each of his 5 workdays.  His work is 20 miles away.  He also goes for a weekend bike ride of 200 miles.    If he can bike at 25 mph how much time does he spend biking a week?\nAnswer: ",
+      "actual": "He bikes 20*2=40 miles each day for work\nSo he bikes 40*5=200 miles for work\nThat means he bikes a total of 200+200=400 miles for work\nSo he bikes a total of 400/25=16 hours",
+      "predicted": "First, let's calculate how many miles Tim bikes to work in a week. Since his work is 20 miles away and he rides to work and back each day, he bikes 20*2 = 40 miles each day. Over 5 workdays, he bikes 40*5 = 200 miles to work.",
+      "metrics": {
+        "exact_match": false,
+        "bleu_score": 0.0,
+        "f1_score": 0.7692307692307693
+      }
+    }
+  ]
+}
